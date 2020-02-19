@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HelloJMockit.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../../logo.png'/>
+  <script type='text/javascript' src='../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>jmockit.cn/src/main/java/cn/jmockit/demos/HelloJMockit.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package cn.jmockit.demos;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.Locale;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='comment'>//一个简单的类，能用不同语言打招呼</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>6</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l6s0'>public class HelloJMockit {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// 向JMockit打招呼</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String sayHello() {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>1</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='uncovered' onclick="showPath(this,'l9s0 l10s0 l12s0')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l9s0 l10s0 l15s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>9</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l9s0'>		Locale locale = Locale.getDefault();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>		<span id='l10s0' title='Executions: 1' class='covered'>if (locale.equals(Locale.CHINA))</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td>&nbsp;</td>
+      <td><pre class='comment'>			// 在中国，就说中文</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l12s0'>			return "你好，JMockit!";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		} else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='comment'>			// 在其它国家，就说英文</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l15s0'>			return "Hello，JMockit!";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

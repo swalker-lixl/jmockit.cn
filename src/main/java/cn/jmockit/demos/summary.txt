@@ -1,0 +1,59 @@
+基础
+一、jmockit 的配置
+1、pom文件添加依赖，但注意一个坑，位置要在 Junit 前。否则会有初始化空指针问题。
+2、ide 中调节 maven 包的顺序，使得jmockit位于Juni之前，原因同上。
+
+二、jmockit 程序结构
+a)测试属性：即测试类的一个属性。它作用于测试类的所有测试方法。
+      在JMockit中，我们可以用JMockit的注解API来修饰它。
+      这些API有@Mocked, @Tested, @Injectable,@Capturing。
+      在上述例子中，我们用@Mocked修饰了测试属性HelloJMockit helloJMockit，表示helloJMockit这个测试属性，它的实例化，属性赋值，方法调用的返回值全部由JMockit来接管，
+      接管后，helloJMockit的行为与HelloJMockit类定义的不一样了，而是由录制脚本来定义了。
+
+b)测试参数：即测试方法的参数。它仅作用于当前测试方法。
+JUnit中是不允许的给测试方法加参数，但是如果参数是被JMockit相关注解修饰的，则可以。
+
+c) Record-Replay-Verification与JUnit程序的AAA(Arrange-Action-Assert)本质一致。
+
+
+三、api
+1、@Mocked：【类】会生成一个Mocked对象，这个对象方法（包含静态方法)返回默认值。【@Mocked是针对其修饰类的所有实例都会生效，类的静态方法，构造函数有影响】
+场景：当我们的测试程序依赖某个接口时，只需要@Mocked一个注解，JMockit就能帮我们生成这个接口的实例。
+
+2、@Injectable 【实例】会生成一个Mocked对象，这个对象方法（包含静态方法)返回默认值。【@Injectable只是针对其修饰的实例，对类的静态方法，构造函数没有影响】
+
+3、@Tested & @Injectable 【手动注入】当我们需要手工管理被测试类的依赖时,轻松搞定被测试类及其依赖注入细节。
+
+4、@Capturing 【接口】只知道父类或接口时，但要控制它所有子类的行为时，子类可能有多个实现（可能有人工写的，也可能是AOP代理自动生成时）。
+
+5、Expectations 如只mock类/对象的某一个方法。采用构造式，传入对象类class，否则通过引用外部类的Mock对象。
+
+6、MockUp & @Mock比较适合于一个项目中，用于对一些通用类的Mock，以减少大量重复的new Exceptations{{}}代码。
+
+7、Verifications 关心类的某个方法有没有调用，调用多少次，你可以使用new Verifications() {{}}验证代码块。
+
+
+
+
+
+@Tested表示被测试对象。如果该对象没有赋值，JMockit会去实例化它
+若@Tested的构造函数有参数，则JMockit通过在测试属性&测试参数中查找@Injectable修饰的Mocked对象注入@Tested对象的构造函数来实例化;
+不然，则用无参构造函数来实例化。
+
+Mockit还会通过属性查找的方式，把@Injectable对象注入到@Tested对象中。
+注入的匹配规则：先类型，再名称(构造函数参数名，类的属性名)。
+
+若找到多个可以注入的@Injectable，则选择最优先定义的@Injectable对象。
+
+
+
+
+
+
+
+
+
+
+用法：
+自己定测试case,先写主体代码，然后在必要的地方MOCK相应结果，录制期望值，完成逻辑流的走通。
+

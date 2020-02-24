@@ -15,4 +15,20 @@ public class HelloJMockit {
 			return "Hello，JMockit!";
 		}
 	}
+
+
+	// 向JMockit说名字
+	public String sayName() {
+		Locale locale = Locale.getDefault();
+		if (locale.equals(Locale.CHINA)) {
+			// 在中国，就说中文
+			return "你好，我是李喜龙";
+		} else {
+			// 在其它国家，就说英文
+			return "Hello，I'm lixilong !";
+		}
+	}
+
+
+
 }

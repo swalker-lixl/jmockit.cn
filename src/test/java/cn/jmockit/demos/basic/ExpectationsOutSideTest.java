@@ -2,6 +2,7 @@ package cn.jmockit.demos.basic;
 
 import java.util.Calendar;
 
+import mockit.MockUp;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,6 +29,14 @@ public class ExpectationsOutSideTest {
 				result = 7;// 小时不再返回当前小时。而是返回早上7点钟
 			}
 		};
+
+
+		new MockUp<Calendar>(Calendar.class) {
+
+		};
+
+
+
 		Assert.assertEquals(2016, cal.get(Calendar.YEAR));
 		Assert.assertEquals(7, cal.get(Calendar.HOUR_OF_DAY));
 		// 因为没有录制过，所以这里月份返回默认值 0

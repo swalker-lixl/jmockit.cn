@@ -24,173 +24,174 @@ import java.util.List;
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>6</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>public class SayHello implements ISayHello {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>7</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	@Override</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>8</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public String sayHello(String who, int gender) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>9</td><td>&nbsp;</td>
-      <td><pre class='comment'>		// 性别校验</pre></td>
-    </tr>
-    <tr>
-      <td></td><td class='count'>0</td>
-      <td class='paths'>
-        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/7</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l12s0')">A: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l16s0 l18s0')">B: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l16s0 l18s0')">C: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l16s0 l20s0')">D: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l16s0 l20s0')">E: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l16s0 l22s0')">F: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l16s0 l22s0')">G: 0</span>
-      </td>
-    </tr>
-    <tr>
-      <td class='line'>10</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		if (gender != FEMALE) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>11</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			if (gender != MALE) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>12</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>				throw new IllegalArgumentException("illegal gender");</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>13</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			}</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>14</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>15</td><td>&nbsp;</td>
-      <td><pre class='comment'>		// 根据不同性别，返回不同打招呼的内容</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>16</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		switch (gender) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>17</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		case FEMALE:</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>18</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			return "hello Mrs " + who; </pre></td>
-    </tr>
-    <tr>
-      <td class='line'>19</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		case MALE:</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>20</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			return "hello Mr " + who;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>21</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		default:</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>22</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			return "hello  " + who;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>23</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>24</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
+      <td class='line'>6</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l6s0'>public class SayHello implements ISayHello {</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>26</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	@Override</pre></td>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    @Override</pre></td>
     </tr>
     <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public String sayHello(String who, int gender) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // 性别校验</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#b64900' onclick='hidePath()'>Path coverage: 2/7</span>
+        <span class='uncovered' onclick="showPath(this,'l11s0 l12s0 l13s0')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l11s0 l17s0 l19s0')">B: 1</span>
+        <span class='uncovered' onclick="showPath(this,'l11s0 l12s0 l17s0 l19s0')">C: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l11s0 l17s0 l21s0')">D: 0</span>
+        <span class='covered' onclick="showPath(this,'l11s0 l12s0 l17s0 l21s0')">E: 1</span>
+        <span class='uncovered' onclick="showPath(this,'l11s0 l17s0 l23s0')">F: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l11s0 l12s0 l17s0 l23s0')">G: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>        <span id='l11s0' title='Executions: 2' class='covered'>if (gender != FEMALE)</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>            <span id='l12s0' title='Executions: 1' class='covered'>if (gender != MALE)</span> {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l13s0'>                throw new IllegalArgumentException("illegal gender");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // 根据不同性别，返回不同打招呼的内容</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l17s0'>        switch (gender) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            case FEMALE:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l19s0'>                return "hello Mrs " + who;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            case MALE:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l21s0'>                return "hello Mr " + who;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            default:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l23s0'>                return "hello  " + who;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
       <td class='line'>27</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public List&lt;String> sayHello(String[] who, int[] gender) {</pre></td>
+      <td><pre class='prettyprint'>    @Override</pre></td>
     </tr>
     <tr>
       <td class='line'>28</td><td>&nbsp;</td>
-      <td><pre class='comment'>		// 参数校验</pre></td>
+      <td><pre class='prettyprint'>    public List&lt;String> sayHello(String[] who, int[] gender) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // 参数校验</pre></td>
     </tr>
     <tr>
       <td></td><td class='count'>0</td>
       <td class='paths'>
         <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/5</span>
-        <span class='uncovered' onclick="showPath(this,'l29s0 l30s0')">A: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l29s0 l29s1 l30s0')">B: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l29s0 l29s1 l32s0 l33s0')">C: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l29s0 l29s1 l32s0 l36s0 l37s0 l40s0')">D: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l29s0 l29s1 l32s0 l36s0 l37s0 l38s0 l40s0')">E: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l30s0 l31s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l30s0 l30s1 l31s0')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l30s0 l30s1 l33s0 l34s0')">C: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l30s0 l30s1 l33s0 l37s0 l38s0 l41s0')">D: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l30s0 l30s1 l33s0 l37s0 l38s0 l39s0 l41s0')">E: 0</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>29</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		if (who == null || gender == null) {</pre></td>
+      <td class='line'>30</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>        <span id='l30s0' title='Executions: 0' class='uncovered'>if (who == null</span> || <span id='l30s1' title='Executions: 0' class='uncovered'>gender == null)</span> {</pre></td>
     </tr>
     <tr>
-      <td class='line'>30</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			return null;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>31</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td class='line'>31</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l31s0'>            return null;</pre></td>
     </tr>
     <tr>
       <td class='line'>32</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		if (who.length != gender.length) {</pre></td>
+      <td><pre class='prettyprint'>        }</pre></td>
     </tr>
     <tr>
-      <td class='line'>33</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			throw new IllegalArgumentException();</pre></td>
+      <td class='line'>33</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>        <span id='l33s0' title='Executions: 0' class='uncovered'>if (who.length != gender.length)</span> {</pre></td>
     </tr>
     <tr>
-      <td class='line'>34</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td class='line'>34</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l34s0'>            throw new IllegalArgumentException();</pre></td>
     </tr>
     <tr>
       <td class='line'>35</td><td>&nbsp;</td>
-      <td><pre class='comment'>		//把向每个人打招呼的内容，保存到result中。</pre></td>
+      <td><pre class='prettyprint'>        }</pre></td>
     </tr>
     <tr>
       <td class='line'>36</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		List&lt;String> result = new ArrayList&lt;String>();</pre></td>
+      <td><pre class='comment'>        //把向每个人打招呼的内容，保存到result中。</pre></td>
     </tr>
     <tr>
-      <td class='line'>37</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		for (int i = 0; i &lt; gender.length; i++) {</pre></td>
+      <td class='line'>37</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l37s0'>        List&lt;String> result = new ArrayList&lt;String>();</pre></td>
     </tr>
     <tr>
-      <td class='line'>38</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>			result.add(this.sayHello(who[i], gender[i]));</pre></td>
+      <td class='line'>38</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>        <span id='l38s0' title='Executions: 0' class='uncovered'>for (int i = 0</span>; i &lt; gender.length; i++) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>39</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td class='line'>39</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l39s0'>            result.add(this.sayHello(who[i], gender[i]));</pre></td>
     </tr>
     <tr>
       <td class='line'>40</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		return result;</pre></td>
+      <td><pre class='prettyprint'>        }</pre></td>
     </tr>
     <tr>
-      <td class='line'>41</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
+      <td class='line'>41</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l41s0'>        return result;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>43</td><td>&nbsp;</td>
+      <td class='line'>44</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

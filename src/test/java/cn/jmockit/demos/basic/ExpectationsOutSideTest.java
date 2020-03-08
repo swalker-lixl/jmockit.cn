@@ -2,6 +2,7 @@ package cn.jmockit.demos.basic;
 
 import java.util.Calendar;
 
+import mockit.Mock;
 import mockit.MockUp;
 import org.junit.Assert;
 import org.junit.Test;
@@ -16,6 +17,7 @@ import mockit.Mocked;
 public class ExpectationsOutSideTest {
 	@Mocked
 	Calendar cal;
+
 
 	@Test
 	public void testRecordOutside() {
